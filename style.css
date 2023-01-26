@@ -1,48 +1,142 @@
 * {
   margin: 0;
-  padding: 0;
 }
 
 .container {
   text-align: center;
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
-  grid-template-rows: 1fr 1fr 5fr 5fr;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  grid-template-rows: 1fr 1fr 0.5fr 5fr 0.5 5fr;
+  font-family: sans-serif;
 }
 
-.header,.sidebar {
+.container div {
+    padding-top: 15px;
+}
+ 
+ul {
+    list-style: none;
+}
+
+.sidebar ul {
+    padding-top: 50px;
+    padding-left: 0pt;
+}
+
+.sidebar ul li {
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+.sidebar {
     grid-column: 1 / 1;
-    grid-row: 1 / -1;
+    grid-row: 1 / 7;
     background-color: dodgerblue;
     color: white;
+    text-align: start;
+    padding-left: 15px;
 }
 
 .first-row-nav, .second-row-nav {
-    grid-column: 2 / 4;
+    background-color: antiquewhite;
+    grid-column: 2 / 6;
+    display: grid;
 }
 
 .first-row-nav {
+    grid-template-columns: 3fr 1fr;
     grid-row: 1 / 1;
 }
 
+.first-row-nav ul {
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+
 .second-row-nav {
     grid-row: 2 / 2;
+    grid-template-columns: 1fr 5fr 3fr;
+}
+
+.second-row-nav ul {
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.project-header, .announcement-header {
+    grid-row: 3 / 3;
+    background-color: #bccbde;
+    text-align: start;
+}
+
+.project-header {
+    grid-column: 2 / 2;
+}
+
+.announcement-header {
+    grid-column: 3 / 3;
 }
 
 .projects {
     grid-column: 2 / 2;
-    grid-row: 3 / 4;
+    grid-row: 4 / 7;
+    background-color: #bccbde;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.projects .project {
+    background-color: #FFFFFF;
+    color: black;
+    text-align: center;
+    height: 200px;
 }
 
 .announcements, .trending {
     grid-column: 3 / 3;
+    padding-right: 15px;
 }
 
 .announcements {
-    grid-row: 3 / 3;
+    grid-row: 4 / 4;
+    background-color: #bccbde;
+    padding-bottom: 15px;
+}
+
+.announcements .announcement {
+    background-color: #FFFFFF;
+    color: black;
+    text-align: center;
+}
+
+.trending-header {
+    grid-column: 3 / 3;
+    grid-row: 5 / 5;
+    background-color: #bccbde;
+    text-align: start;
 }
 
 .trending {
-    grid-row: 4 / 4;
+    grid-column: 3 / 3;
+    grid-row: 6/ 6;
+    background-color: #bccbde;
+    padding-bottom: 15px;;
+}
+
+.trending .trend {
+    background-color: #FFFFFF;
+    color: black;
+    text-align: center;
 }
