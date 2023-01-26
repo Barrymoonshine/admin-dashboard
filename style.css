@@ -6,6 +6,15 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+button {
+    border: none;
+    background-color: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
 .container {
   text-align: center;
   display: grid;
@@ -13,10 +22,6 @@ body{
   grid-template-rows: 1fr 1fr 0.5fr 5fr 0.5 5fr;
 }
 
-.container div {
-    padding-top: 15px;
-}
- 
 ul {
     list-style: none;
 }
@@ -29,7 +34,9 @@ ul {
     text-align: start;
     display: grid;
     padding-left: 20px;
-    grid-template-rows: 1fr 4fr 4fr;
+    grid-template-rows: 1fr 4fr 6fr;
+    padding-left: 40px;
+    padding-top:20px;
 }
 
 .logo {
@@ -48,12 +55,13 @@ ul {
 
 .sidebar ul {
     padding-left: 0pt;
+    padding-top: 30px;
 }
 
 .sidebar ul li {
-    padding-top: 20px;
     font-size: 20px;
 }
+
 
 .sidebar ul li:hover {
    cursor: pointer;
@@ -63,25 +71,60 @@ ul {
     width: 30px;
     height:30px;
     position: relative;
-    top: 2px;
+    top: 3px;
     padding-right: 20px;
 }
 
+form{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+#query {
+    background-color: lightgray;
+    height: 40px;
+    min-width: 100px;
+    border-radius: 20px;
+    border: none;
+    flex:1;
+}
+
+.search-icon, .bell-icon {
+    width: 25px;
+    height:25px;
+    top: 5px;
+}
+
+.profile-picture {
+    width: 60px;
+    height: 60px;
+    top: 5px;
+}
+
+.search-button {
+    background-color: rgba(0,0,0,0);
+}
 
 .first-row-nav, .second-row-nav {
-    background-color: antiquewhite;
+    padding-left: 40px;
+    padding-top:20px;
+    padding-right: 20px;
+    background-color: rgb(253, 248, 242);
     grid-column: 2 / 6;
     display: grid;
+    align-items:center;
 }
 
 .first-row-nav {
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
     grid-row: 1 / 1;
 }
 
 .first-row-nav ul {
     display:grid;
     grid-template-columns: repeat(3,1fr);
+    align-items: center;
 }
 
 
