@@ -1,4 +1,48 @@
-.hello {
-    color: wheat;
-    background-color: black;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 1fr 1fr 5fr 5fr;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header,.sidebar {
+    grid-column: 1 / 1;
+    grid-row: 1 / -1;
+    background-color: dodgerblue;
+    color: white;
+}
+
+.first-row-nav, .second-row-nav {
+    grid-column: 2 / 4;
+}
+
+.first-row-nav {
+    grid-row: 1 / 1;
+}
+
+.second-row-nav {
+    grid-row: 2 / 2;
+}
+
+.projects {
+    grid-column: 2 / 2;
+    grid-row: 3 / 4;
+}
+
+.announcements, .trending {
+    grid-column: 3 / 3;
+}
+
+.announcements {
+    grid-row: 3 / 3;
+}
+
+.trending {
+    grid-row: 4 / 4;
 }
