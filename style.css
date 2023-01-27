@@ -2,6 +2,10 @@
   margin: 0;
 }
 
+:root {
+  --bottom-right-background: rgb(241, 236, 236);
+}
+
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -38,9 +42,10 @@ ul {
     text-align: start;
     display: grid;
     padding-left: 20px;
-    grid-template-rows: 1fr 4fr 6fr;
+    grid-template-rows: 1fr 4fr 7fr;
     padding-left: 40px;
     padding-top:20px;
+    min-width:260px;
 }
 
 .logo {
@@ -63,6 +68,7 @@ ul {
 }
 
 .sidebar ul li {
+    padding-top: 15px;
     font-size: 20px;
 }
 
@@ -79,7 +85,7 @@ ul {
     padding-right: 20px;
 }
 
-form{
+form {
     display: flex;
     justify-content: start;
     align-items: center;
@@ -97,22 +103,21 @@ form{
 .search-icon, .bell-icon {
     width: 25px;
     height:25px;
-    top: 5px;
 }
 
-.profile-picture {
+.profile-picture-medium {
     width: 60px;
     height: 60px;
-    top: 5px;
 }
 
+
 .search-button {
+    padding-right: 20px;
     background-color: rgba(0,0,0,0);
 }
 
 .first-row-nav, .second-row-nav {
     padding-left: 40px;
-    padding-top:20px;
     padding-right: 20px;
     padding-bottom: 10px;
     background-color: rgb(253, 248, 242);
@@ -127,6 +132,7 @@ form{
 }
 
 .first-row-nav ul {
+    padding-top: 20px;
     display:grid;
     grid-template-columns: repeat(3,1fr);
     align-items: center;
@@ -134,13 +140,34 @@ form{
 
 
 .second-row-nav {
+    padding-bottom: 15px;
     grid-row: 2 / 2;
     grid-template-columns: 1fr 5fr 3fr;
     box-shadow: 0 4px 6px -6px #222;
 }
 
+.user-welcome {
+    display: grid;
+    justify-content: flex-start;
+    grid-template-columns: 100px 400px;
+    grid-template-rows: 1fr 1fr;
+}
+
+.profile-picture {
+    grid-column: 1/ 1;
+    grid-row: span 2;
+    width: 90px;
+    height: 90px;
+}
+
 h2,h3 {
+    grid-column: 2/ 2;
+    padding-left: 10px;
     text-align: start;
+}
+
+h3 {
+    align-self: end;
 }
 
 .menu-button {
@@ -149,8 +176,6 @@ h2,h3 {
     border-radius: 20px;
     color:white;
     font-size: 15px;
-    
-
 }
 
 .second-row-nav ul {
@@ -161,7 +186,7 @@ h2,h3 {
 
 .project-header, .announcement-header, .trending-header {
     grid-row: 3 / 3;
-    background-color: #bccbde;
+    background-color: var(--bottom-right-background);
     text-align: start;
     font-size: 20px;
     font-weight: bold;
@@ -183,7 +208,7 @@ h2,h3 {
 .projects {
     grid-column: 2 / 2;
     grid-row: 4 / 7;
-    background-color: #bccbde;
+    background-color:var(--bottom-right-background);
     display: grid;
     gap: 15px;
     grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
@@ -217,12 +242,15 @@ h2,h3 {
     text-align: start;
 }
 
+.project-nav {
+    width: 100%;
+}
+
 .project-nav ul {
-    gap: 20px;
     display: flex;
-    justify-content: flex-end;
-    min-width: 275px;
-    padding-bottom: 25px;
+    justify-content: end;
+    padding: 0 15px 10px 0;
+    gap:20px;
 }
 
 .project-buttons {
@@ -235,10 +263,14 @@ h2,h3 {
     padding-right: 15px;
 }
 
+.announcements-container, .trending-container {
+    min-width: 300px;
+}
+
 .announcements-container {
     padding: 15px 15px 15px 0;
     grid-row: 4 / 4;
-    background-color: #bccbde;
+    background-color: var(--bottom-right-background);
 }
 
 .announcements {
@@ -271,14 +303,14 @@ h2,h3 {
 .content-border {
     padding: 0 30px 0 30px;
     margin: 0 15px 0 30px;
-    border-bottom:rgb(70, 69, 69); 1px;
+    border-bottom:rgb(70, 69, 69);
 
 }
 
 .trending-header {
     grid-column: 3 / 3;
     grid-row: 5 / 5;
-    background-color: #bccbde;
+    background-color: var(--bottom-right-background);
     text-align: start;
     padding: 10px 15px 15px 0;
 }
@@ -286,7 +318,7 @@ h2,h3 {
 .trending-container {
     grid-column: 3 / 3;
     grid-row: 6/ 6;
-    background-color: #bccbde;
+    background-color:var(--bottom-right-background);
     padding-bottom: 20px;
 }
 
@@ -299,7 +331,7 @@ h2,h3 {
     padding: 30px 0 20px 0;
     display: grid;
     grid-template-rows: repeat(8,1fr);
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 0.75fr 2fr;
 }
 
 .profile-image-small {
@@ -307,7 +339,7 @@ h2,h3 {
     grid-row: span 2;
     width:45px;
     height:45px;
-    padding:5px 0 0 20px;
+    padding:5px 0 0 15px;
     margin-bottom: 20px;
     align-self: end ;
 }
@@ -315,6 +347,7 @@ h2,h3 {
 .trending-message, .trending-tag {
     grid-column: 2 / 2;
     text-align: start;
+    padding-left: 20px;
 }
 
 .trending-tag {
