@@ -225,12 +225,12 @@ h2,h3 {
     padding-bottom: 25px;
 }
 
-.project-buttons{
+.project-buttons {
     width:30px;
     height:30px;
 }
 
-.announcements-container, .announcements, .trending {
+.announcements-container, .announcements, .trending-container {
     grid-column: 3 / 3;
     padding-right: 15px;
 }
@@ -280,17 +280,36 @@ h2,h3 {
     grid-row: 5 / 5;
     background-color: #bccbde;
     text-align: start;
+    padding: 10px 15px 15px 0;
 }
 
-.trending {
+.trending-container {
     grid-column: 3 / 3;
     grid-row: 6/ 6;
     background-color: #bccbde;
-    padding-bottom: 15px;;
+    padding-bottom: 20px;
 }
 
-.trending .trend {
-    background-color: #FFFFFF;
+
+.trends {
     color: black;
-    text-align: center;
+    background-color: white;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-radius: 20px;
+    padding: 30px 0 0 0;
+    display: grid;
+    grid-template-rows: repeat(8,1fr);
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+}
+
+.profile-image-small {
+    grid-column: 1 / 1;
+    grid-row: span 2;
+    width:45px;
+    height:45px;
+}
+
+.trending-message {
+    grid-column: 2 / 2;
 }
