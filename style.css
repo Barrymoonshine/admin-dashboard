@@ -15,6 +15,10 @@ button:hover {
     cursor: pointer;
 }
 
+.project-buttons:hover {
+    cursor: pointer;
+}
+
 .container {
   text-align: center;
   display: grid;
@@ -155,14 +159,18 @@ h2,h3 {
     gap:10px;
 }
 
-.project-header, .announcement-header {
+.project-header, .announcement-header, .trending-header {
     grid-row: 3 / 3;
     background-color: #bccbde;
     text-align: start;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 0 10px 0;
 }
 
 .project-header {
     grid-column: 2 / 2;
+    padding: 30px 15px 0px 20px;
 }
 
 .announcement-header {
@@ -175,16 +183,48 @@ h2,h3 {
     background-color: #bccbde;
     display: grid;
     gap: 15px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    padding-right: 15px;
-    padding-left: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+    padding: 15px 15px 15px 20px;
 }
 
 .projects .project {
     background-color: #FFFFFF;
     color: black;
     text-align: center;
-    height: 200px;
+    height: 225px;
+    min-width: 325px;
+    display:grid;
+    grid-template-rows: 1fr 3fr 1fr;
+    justify-items: start;
+    border-radius: 10px;
+    border-left: rgb(252, 156, 172) solid 7px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.project-title {
+    padding: 20px 0 10px 15px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.project-content {
+    padding: 0 0 10px 15px;
+    color:rgb(70, 69, 69);
+    font-size: 15px;
+    text-align: start;
+}
+
+.project-nav ul {
+    gap: 20px;
+    display: flex;
+    justify-content: flex-end;
+    min-width: 275px;
+    padding-bottom: 25px;
+}
+
+.project-buttons{
+    width:30px;
+    height:30px;
 }
 
 .announcements, .trending {
