@@ -140,6 +140,11 @@ form {
     justify-self: center;
 }
 
+.user-name {
+    justify-self: start;
+}
+
+
 .second-row-nav {
     padding-bottom: 15px;
     grid-row: 2 / 2;
