@@ -3,11 +3,10 @@
 }
 
 :root {
-  --bottom-right-background: rgb(241, 236, 236);
-}
-
-body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  --bottom-right-background-color: rgb(241, 236, 236);
+  --sidebar-background-color:  rgb(0, 85, 119);;
+  --top-NAV-background-color: rgb(253, 248, 242);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 button {
@@ -15,12 +14,15 @@ button {
     background-color: none;
 }
 
-button:hover {
+button:hover,
+.project-buttons:hover,
+.sidebar ul li:hover,
+.bell-icon {
     cursor: pointer;
 }
 
-.project-buttons:hover {
-    cursor: pointer;
+ul {
+    list-style: none;
 }
 
 .container {
@@ -30,22 +32,16 @@ button:hover {
   grid-template-rows: 1fr 1fr 0.5fr 5fr 0.5 5fr;
 }
 
-ul {
-    list-style: none;
-}
-
 .sidebar {
     grid-column: 1 / 1;
     grid-row: 1 / 7;
-    background-color: rgb(0, 85, 119);
+    background-color: var(--sidebar-background-color);
     color: white;
     text-align: start;
     display: grid;
-    padding-left: 20px;
     grid-template-rows: 1fr 4fr 7fr;
-    padding-left: 40px;
-    padding-top:20px;
     min-width:260px;
+    padding: 20px 0 0 40px;
 }
 
 .logo {
@@ -63,18 +59,12 @@ ul {
 }
 
 .sidebar ul {
-    padding-left: 0pt;
     padding-top: 30px;
 }
 
 .sidebar ul li {
     padding-top: 15px;
     font-size: 20px;
-}
-
-
-.sidebar ul li:hover {
-   cursor: pointer;
 }
 
 .sidebar-icon {
@@ -98,9 +88,11 @@ form {
     border-radius: 20px;
     border: none;
     flex:1;
+    padding-left: 10px;
 }
 
-.search-icon, .bell-icon {
+.search-icon, 
+.bell-icon {
     width: 25px;
     height:25px;
 }
@@ -110,20 +102,18 @@ form {
     height: 60px;
 }
 
-
 .search-button {
     padding-right: 20px;
     background-color: rgba(0,0,0,0);
 }
 
-.first-row-nav, .second-row-nav {
-    padding-left: 40px;
-    padding-right: 20px;
-    padding-bottom: 10px;
-    background-color: rgb(253, 248, 242);
+.first-row-nav, 
+.second-row-nav {
+    background-color: var(--top-NAV-background-color);
     grid-column: 2 / 6;
     display: grid;
     align-items:center;
+    padding: 0 20px 10px 40px;
 }
 
 .first-row-nav {
@@ -138,6 +128,17 @@ form {
     align-items: center;
 }
 
+.first-row-nav ul li {
+    display:grid;
+}
+
+.bell-icon {
+    justify-self: end;
+}
+
+.profile-picture-medium {
+    justify-self: center;
+}
 
 .second-row-nav {
     padding-bottom: 15px;
@@ -184,9 +185,18 @@ h3 {
     gap:10px;
 }
 
+.project-header, 
+.announcement-header, 
+.trending-header, 
+.projects, 
+.announcements-container,
+.trending-header,
+.trending-container {
+    background-color: var(--bottom-right-background-color);
+}
+
 .project-header, .announcement-header, .trending-header {
     grid-row: 3 / 3;
-    background-color: var(--bottom-right-background);
     text-align: start;
     font-size: 20px;
     font-weight: bold;
@@ -208,11 +218,10 @@ h3 {
 .projects {
     grid-column: 2 / 2;
     grid-row: 4 / 7;
-    background-color:var(--bottom-right-background);
     display: grid;
     gap: 15px;
     grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
-    padding: 15px 15px 15px 20px;
+    padding: 15px 15px 15px 20px;  
 }
 
 .projects .project {
@@ -270,7 +279,6 @@ h3 {
 .announcements-container {
     padding: 15px 15px 15px 0;
     grid-row: 4 / 4;
-    background-color: var(--bottom-right-background);
 }
 
 .announcements {
@@ -304,21 +312,17 @@ h3 {
     padding: 0 30px 0 30px;
     margin: 0 15px 0 30px;
     border-bottom:rgb(70, 69, 69);
-
 }
 
 .trending-header {
     grid-column: 3 / 3;
     grid-row: 5 / 5;
-    background-color: var(--bottom-right-background);
-    text-align: start;
     padding: 10px 15px 15px 0;
 }
 
 .trending-container {
     grid-column: 3 / 3;
     grid-row: 6/ 6;
-    background-color:var(--bottom-right-background);
     padding-bottom: 20px;
 }
 
@@ -341,7 +345,7 @@ h3 {
     height:45px;
     padding:5px 0 0 15px;
     margin-bottom: 20px;
-    align-self: end ;
+    align-self: end;
 }
 
 .trending-message, .trending-tag {
@@ -361,5 +365,4 @@ h3 {
     color:rgb(70, 69, 69);
     font-size: 15px;
     align-self: start ;
-   
 }
