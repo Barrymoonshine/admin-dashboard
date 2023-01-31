@@ -28,7 +28,7 @@ ul {
   text-align: center;
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: 229px 4fr;
 }
 
 /* sidebar start */
@@ -40,9 +40,25 @@ ul {
     color: white;
     text-align: start;
     display: grid;
-    grid-template-rows: 1fr 4fr 7fr;
+    grid-template-rows: 95px 374px 655px auto;
     min-width:260px;
-    padding: 20px 0 0 40px;
+    padding: 20px 0 0 0;
+}
+
+.dashboard{
+    padding-left: 40px;
+}
+
+.dashboard-icon {
+    grid-row: 1/2;
+}
+
+.sidebar-menu-top {
+    grid-row: 2/3;
+}
+
+.sidebar-menu-bottom {
+    grid-row: 3/4;
 }
 
 .logo {
@@ -85,7 +101,6 @@ ul {
     grid-column: 2 / 3;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    box-shadow: 0px 10px 10px rgb(0, 0, 0);
 }
 
 .first-row-nav, 
@@ -211,9 +226,7 @@ h3 {
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
-    max-height: 100%;
-    padding-top: 0px;
-    overflow: scroll;
+    box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.75);
 }
 
 .projects-section {
@@ -305,7 +318,7 @@ h3 {
 }
 
 .announcements-container, .trending-container {
-    min-width: 300px;
+    min-width: 250px;
 }
 
 .announcements-container {
@@ -396,3 +409,11 @@ h3 {
 }
 
 /* main end */
+
+@media (max-width: 1300px) {    
+   .main {
+        display: grid;
+        grid-template-rows: 550px 320px 650px;
+        height: 100%;
+    }   
+}
