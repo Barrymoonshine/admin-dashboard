@@ -8,144 +8,157 @@
     <title>Admin Dashboard</title>
 </head>
 <body>
-    <div class="container">
+  <div class="container">
 
-        <div class="sidebar">
-            <div class="header">
-                <div class="logo"><img class="dashboard-icon" src="images/globe.svg" alt="globe"> Dashboard </div>
-            </div>
-            <ul>
-                <li><img class="sidebar-icon" src="images/home.svg" alt="home"><strong>Home</strong></li>
-                <li><img class="sidebar-icon" src="images/profile.svg" alt="profile">Profile</li>
-                <li><img class="sidebar-icon" src="images/messages.svg" alt="messages">Messages</li>
-                <li><img class="sidebar-icon" src="images/history.svg" alt="history">History</li>
-                <li><img class="sidebar-icon" src="images/tasks.svg" alt="tasks">Tasks</li>
-                <li><img class="sidebar-icon" src="images/community.svg" alt="communities">Communities</li>
-            </ul>
-            <ul>
-                <li><img class="sidebar-icon" src="images/settings.svg" alt="settings">Settings</li>
-                <li><img class="sidebar-icon" src="images/support.svg" alt="support">Support</li>
-                <li><img class="sidebar-icon" src="images/privacy.svg" alt="privacy">Privacy</li>
-            </ul>
+    <!--sidebar start-->
+    <div class="sidebar">
+      <div class="dashboard">
+      <div class="logo"><img class="dashboard-icon" src="images/globe.svg" alt="globe"> Dashboard </div>
+      </div>
+      <ul>
+        <li><img class="sidebar-icon" src="images/home.svg" alt="home"><strong>Home</strong></li>
+        <li><img class="sidebar-icon" src="images/profile.svg" alt="profile">Profile</li>
+        <li><img class="sidebar-icon" src="images/messages.svg" alt="messages">Messages</li>
+        <li><img class="sidebar-icon" src="images/history.svg" alt="history">History</li>
+        <li><img class="sidebar-icon" src="images/tasks.svg" alt="tasks">Tasks</li>
+        <li><img class="sidebar-icon" src="images/community.svg" alt="communities">Communities</li>
+      </ul>
+      <ul>
+        <li><img class="sidebar-icon" src="images/settings.svg" alt="settings">Settings</li>
+        <li><img class="sidebar-icon" src="images/support.svg" alt="support">Support</li>
+        <li><img class="sidebar-icon" src="images/privacy.svg" alt="privacy">Privacy</li>
+      </ul>
+    </div>
+    <!--sidebar end-->
+
+    <!--header start-->
+    <div class="header">
+      <div class="first-row-nav">
+        <form id="form"> 
+          <button class="search-button"><img class="search-icon" src="images/search.svg" alt="search"></button>
+          <input type="search" id="query" name="query" >
+        </form>
+        <div class="first-row-nav-break"></div>
+        <div class="first-row-menu">
+          <ul>
+            <li><img class="bell-icon" src="images/bell.svg" alt="bell"></li>
+            <li><img class="profile-picture-medium" src="images/profile-pic.svg" alt="profile picture"></li>
+            <li class="user-name"><strong>Mia Oakley</strong></li>
+          </ul>
         </div>
+      </div>
 
-        <div class="first-row-nav">
-            <form id="form"> 
-                <button class="search-button"><img class="search-icon" src="images/search.svg" alt="search"></button>
-                <input type="search" id="query" name="query" >
-            </form>
-            <div class="first-row-nav-break"></div>
-            <div class="first-row-menu">
-                <ul>
-                <li><img class="bell-icon" src="images/bell.svg" alt="bell"></li>
-                <li><img class="profile-picture-medium" src="images/profile-pic.svg" alt="profile picture"></li>
-                <li class="user-name"><strong>Mia Oakley</strong></li>
-                </ul>
-            </div>
+      <div class="second-row-nav">
+        <div class="user-welcome">
+          <img class="profile-picture" src="images/profile-pic.svg" alt="profile picture">
+            <h3>Hi there, </h3>
+            <h2>Mia Oakley (@mamamia)</h2>
         </div>
-
-        <div class="second-row-nav">
-            <div class="user-welcome">
-                <img class="profile-picture" src="images/profile-pic.svg" alt="profile picture">
-                <h3>Hi there, </h3>
-                <h2>Mia Oakley (@mamamia)</h2>
-            </div>
-            <div></div>
-            <div class="second-row-menu">
-                <ul>
-                <li><button class="menu-button">New</button></li>
-                <li><button class="menu-button">Upload</button></li>
-                <li><button class="menu-button">Share</button></li>
-                </ul>
-            </div>
+        <div class="second-row-nav-break"></div>
+        <div class="second-row-menu">
+          <ul>
+            <li><button class="menu-button">New</button></li>
+            <li><button class="menu-button">Upload</button></li>
+            <li><button class="menu-button">Share</button></li>
+          </ul>
         </div>
+      </div>
+    </div>
+    <!--header end-->
 
+    <!--main start-->
+    <div class="main">
+      <div class="projects-section">
         <div class="project-header">Your Projects</div>
-        <div class="projects">
-        <div class="project">
-          <p class="project-title">Super Cool Project</p>
-          <p class="project-content">Ipsa alias omnis iste magnam dicta dolorem incidunt itaque facilis nemo aperiam. Reprehenderit porro eos dignissimos beatae et voluptatem? Asperiores, sed praesentium!</p>
-          <div class="project-nav">
-            <ul>
-                <li><img class="project-buttons" src="images/favourite.svg" alt="favourite"></li>
-                <li><img class="project-buttons" src="images/watch.svg" alt="watch"></li>
-                <li><img class="project-buttons" src="images/share.svg" alt="share"></li>
-            </ul>
-          </div>
-        </div>
-        <div class="project">
-          <p class="project-title">Less Cool Project</p>
-          <p class="project-content">Risus commodo viverra maecenas accumsan lacus vel. Nunc eget lorem dolor sed viverra ipsum nunc aliquet bibendum. Nec sagittis aliquam malesuada bibendum arcu vitae elementum.</p>
-          <div class="project-nav">
-            <ul>
-                <li><img class="project-buttons" src="images/favourite.svg" alt="favourite"></li>
-                <li><img class="project-buttons" src="images/watch.svg" alt="watch"></li>
-                <li><img class="project-buttons" src="images/share.svg" alt="share"></li>
-            </ul>
-          </div>
-        </div>
-        <div class="project">
-          <p class="project-title">Impossible App</p>
-          <p class="project-content">Amet purus gravida quis blandit turpis cursus. Enim facilisis gravida neque convallis a cras semper. Dapibus ultrices in iaculis nunc sed augue.</p>
-          <div class="project-nav">
-            <ul>
-                <li><img class="project-buttons" src="images/favourite.svg" alt="favourite"></li>
-                <li><img class="project-buttons" src="images/watch.svg" alt="watch"></li>
-                <li><img class="project-buttons" src="images/share.svg" alt="share"></li>
-            </ul>
-          </div>
-        </div>
-        <div class="project">
-          <p class="project-title">Easy Peasy App</p>
-          <p class="project-content">Turpis egestas integer eget aliquet nibh praesent tristique magna. Neque laoreet suspendisse interdum consectetur libero. Etiam erat velit scelerisque in dictum non consectetur a. Amet facilisis magna etiam</p>
-          <div class="project-nav">
-            <ul>
-                <li><img class="project-buttons" src="images/favourite.svg" alt="favourite"></li>
-                <li><img class="project-buttons" src="images/watch.svg" alt="watch"></li>
-                <li><img class="project-buttons" src="images/share.svg" alt="share"></li>
-            </ul>
-          </div>
-        </div>
-        <div class="project">
-          <p class="project-title">Ad Blocker</p>
-          <p class="project-content">Turpis egestas integer eget aliquet nibh praesent tristique magna. Neque laoreet suspendisse interdum consectetur libero. Etiam erat velit scelerisque in dictum non consectetur a.</p>
-          <div class="project-nav">
-            <ul>
-                <li><img class="project-buttons" src="images/favourite.svg" alt="favourite"></li>
-                <li><img class="project-buttons" src="images/watch.svg" alt="watch"></li>
-                <li><img class="project-buttons" src="images/share.svg" alt="share"></li>
-            </ul>
-          </div>
-        </div>
-         <div class="project">
-          <p class="project-title">Money Maker</p>
-          <p class="project-content">Ullamcorper morbi tincidunt ornare massa eget egestas purus. Dis parturient montes nascetur ridiculus. Euismod quis viverra nibh cras pulvinar mattis. Mattis rhoncus urna neque viverra justo nec. Morbi leo urna</p>
-          <div class="project-nav">
-            <ul>
-                <li><img class="project-buttons" src="images/favourite.svg" alt="favourite"></li>
-                <li><img class="project-buttons" src="images/watch.svg" alt="watch"></li>
-                <li><img class="project-buttons" src="images/share.svg" alt="share"></li>
-            </ul>
-          </div>
-        </div>
-        </div> 
-
-        <div class="announcement-header">Announcements</div>
-        <div class="announcements-container">
-            <div class="announcements">
-            <p class="announcement-title">Site maintenance</p>
-            <p class="announcement-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
-            <p class="content-border"></p>
-            <p class="announcement-title">Community Share Day</p>
-            <p class="announcement-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
-            <p class="content-border"></p>
-            <p class="announcement-title">Updated Privacy Policy</p>
-            <p class="announcement-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+          <div class="projects">
+            <div class="project">
+              <p class="project-title">Super Cool Project</p>
+              <p class="project-content">Ipsa alias omnis iste magnam dicta dolorem incidunt itaque facilis nemo aperiam. Reprehenderit porro eos dignissimos beatae et voluptatem? Asperiores, sed praesentium!</p>
+                <div class="project-nav">
+                  <ul>
+                    <li><img class="project-buttons" src="images/favourite.svg" alt="favourite"></li>
+                    <li><img class="project-buttons" src="images/watch.svg" alt="watch"></li>
+                    <li><img class="project-buttons" src="images/share.svg" alt="share"></li>
+                  </ul>
+                </div>
             </div>
-        </div>
+            <div class="project">
+              <p class="project-title">Less Cool Project</p>
+              <p class="project-content">Risus commodo viverra maecenas accumsan lacus vel. Nunc eget lorem dolor sed viverra ipsum nunc aliquet bibendum. Nec sagittis aliquam malesuada bibendum arcu vitae elementum.</p>
+                <div class="project-nav">
+                  <ul>
+                    <li><img class="project-buttons" src="images/favourite.svg" alt="favourite"></li>
+                    <li><img class="project-buttons" src="images/watch.svg" alt="watch"></li>
+                    <li><img class="project-buttons" src="images/share.svg" alt="share"></li>
+                  </ul>
+                </div>
+            </div>
+            <div class="project">
+              <p class="project-title">Impossible App</p>
+              <p class="project-content">Amet purus gravida quis blandit turpis cursus. Enim facilisis gravida neque convallis a cras semper. Dapibus ultrices in iaculis nunc sed augue.</p>
+                <div class="project-nav">
+                  <ul>
+                    <li><img class="project-buttons" src="images/favourite.svg" alt="favourite"></li>
+                    <li><img class="project-buttons" src="images/watch.svg" alt="watch"></li>
+                    <li><img class="project-buttons" src="images/share.svg" alt="share"></li>
+                  </ul>
+                </div>
+            </div>
+            <div class="project">
+              <p class="project-title">Easy Peasy App</p>
+              <p class="project-content">Turpis egestas integer eget aliquet nibh praesent tristique magna. Neque laoreet suspendisse interdum consectetur libero. Etiam erat velit scelerisque in dictum non consectetur a. Amet facilisis magna etiam</p>
+                <div class="project-nav">
+                  <ul>
+                    <li><img class="project-buttons" src="images/favourite.svg" alt="favourite"></li>
+                    <li><img class="project-buttons" src="images/watch.svg" alt="watch"></li>
+                    <li><img class="project-buttons" src="images/share.svg" alt="share"></li>
+                  </ul>
+                </div>
+            </div>
+            <div class="project">
+              <p class="project-title">Ad Blocker</p>
+              <p class="project-content">Turpis egestas integer eget aliquet nibh praesent tristique magna. Neque laoreet suspendisse interdum consectetur libero. Etiam erat velit scelerisque in dictum non consectetur a.</p>
+                <div class="project-nav">
+                  <ul>
+                    <li><img class="project-buttons" src="images/favourite.svg" alt="favourite"></li>
+                    <li><img class="project-buttons" src="images/watch.svg" alt="watch"></li>
+                    <li><img class="project-buttons" src="images/share.svg" alt="share"></li>
+                  </ul>
+                </div>
+            </div>
+            <div class="project">
+              <p class="project-title">Money Maker</p>
+              <p class="project-content">Ullamcorper morbi tincidunt ornare massa eget egestas purus. Dis parturient montes nascetur ridiculus. Euismod quis viverra nibh cras pulvinar mattis. Mattis rhoncus urna neque viverra justo nec. Morbi leo urna</p>
+                <div class="project-nav">
+                  <ul>
+                    <li><img class="project-buttons" src="images/favourite.svg" alt="favourite"></li>
+                    <li><img class="project-buttons" src="images/watch.svg" alt="watch"></li>
+                    <li><img class="project-buttons" src="images/share.svg" alt="share"></li>
+                  </ul>
+                </div>
+            </div>
+          </div> 
+      </div>
+
+      <div class="announcements-section">
+        <div class="announcement-header">Announcements</div>
+          <div class="announcements-container">
+              <div class="announcements">
+              <p class="announcement-title">Site maintenance</p>
+              <p class="announcement-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+              <p class="content-border"></p>
+              <p class="announcement-title">Community Share Day</p>
+              <p class="announcement-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+              <p class="content-border"></p>
+              <p class="announcement-title">Updated Privacy Policy</p>
+              <p class="announcement-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud...</p>
+              </div>
+          </div>
+      </div>
         
+      <div class="trending-section">
         <div class="trending-header">Trending</div>
-        <div class="trending-container">
+          <div class="trending-container">
             <div class="trends">
                 <p class="profile-image-small"> <img class="profile-image-small" src="images/trendy-one.svg" alt="trend profile picture"></p>    
                 <p class="trending-tag">@tegan</p>
@@ -161,7 +174,11 @@
                 <p class="trending-message">No Traffic Maker</p>
             </div>
         </div>
+      </div>
 
     </div>
+    <!--main end-->
+
+
 </body>
 </html>
